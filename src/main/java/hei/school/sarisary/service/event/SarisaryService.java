@@ -8,7 +8,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import javax.imageio.ImageIO;
@@ -49,7 +48,7 @@ public class SarisaryService {
         return baos.toByteArray();
     }
 
-    public void addOrUpdateSarisaryModelWithImage(MultipartFile image) throws IOException {
+    public void addOrUpdateSarisaryModelWithImage(String id, MultipartFile image) throws IOException {
         byte[] convertedImage = convertToBlackAndWhite(image);
     }
 
